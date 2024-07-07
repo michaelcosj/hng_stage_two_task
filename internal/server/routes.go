@@ -27,5 +27,9 @@ func RegisterRoutes(svc service.Service) http.Handler {
 	mux.Handle("/auth/", http.StripPrefix("/auth", authRoutes))
 	mux.Handle("/api/", http.StripPrefix("/api", handler.Authenticate(apiRoutes)))
 
+	// just incase
+	mux.HandleFunc("POST /api/auth/register", handler.Handle(h.AuthRegister))
+	mux.HandleFunc("POST /api/auth/login", handler.Handle(h.AuthLogin))
+
 	return handler.Logger(handler.StripSlashes(mux))
 }
