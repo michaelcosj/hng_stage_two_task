@@ -1,0 +1,6 @@
+# flyctl launch added from .gitignore
+**/tmp
+**/bin
+**/.env
+**/tern.conf
+fly.toml
