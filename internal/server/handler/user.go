@@ -27,7 +27,7 @@ func (s *Handler) GetUser(w http.ResponseWriter, r *http.Request) error {
 
 	writeJSON(w, http.StatusCreated, SuccessResponse{
 		Status:  "success",
-		Message: "Successfully retrieved user data",
+		Message: "User found successfully",
 		Data:    data,
 	})
 

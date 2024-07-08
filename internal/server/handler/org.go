@@ -23,7 +23,7 @@ func (s *Handler) GetUserOrganisations(w http.ResponseWriter, r *http.Request) e
 
 	writeJSON(w, http.StatusOK, SuccessResponse{
 		Status:  "success",
-		Message: "Successfully retrieved user organisations",
+		Message: "User organisations found successfully",
 		Data:    data,
 	})
 
@@ -49,7 +49,7 @@ func (s *Handler) GetSingleOrganisation(w http.ResponseWriter, r *http.Request) 
 
 	writeJSON(w, http.StatusOK, SuccessResponse{
 		Status:  "success",
-		Message: "Successfully retrieved organisation",
+		Message: "Organisation found successfully",
 		Data:    data,
 	})
 
